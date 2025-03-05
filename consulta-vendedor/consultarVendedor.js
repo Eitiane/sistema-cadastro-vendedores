@@ -3,7 +3,7 @@ let mensagemConsulta = 'Erro a consultar dados';
 function consultarVendedor() {
     if (nomeVendedor == '') {
         alert(mensagemConsulta);
-        menuSistema();
+        return;
     } else {
         alert('consulta de vendedor')
         alert(`nome: ${nomeVendedor}\nIdade: ${idadeVendedor}\nVendas: ${vendasVendedor}\nCarga Horária: ${cargaHorariaVendedor}`);

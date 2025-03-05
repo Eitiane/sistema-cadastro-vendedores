@@ -9,6 +9,9 @@ function sairSistema() {
     alert('sair do sistema');
     return
 }
-
+function paginaCadastroVendedor() {
+    window.location.href = 'cadastro-vendedor/cadastroVendedor.html';
+}
+document.querySelector('.btn-cadastrar').addEventListener('click', paginaCadastroVendedor);
 document.querySelector('.btn-sair').addEventListener('click', sairSistema);
 

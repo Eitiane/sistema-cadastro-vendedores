@@ -1,28 +1,23 @@
 let mensagemSucesso = 'Cadastro realizado com sucesso \nnome do vendedor: ';
 let mensagemErro = 'Cadastro não realizado';
 
+
+function voltarPaginaInicial() {
+    window.location.href = '../index.html';
+}
 function cadastrarVendedor() {
-    alert('cadastro de Vendedores')
-    nomeVendedor = prompt('digite o nome do vendedor');
-    idadeVendedor = prompt('digite a idade do vendedor');
-    if (idadeVendedor < 16){
-        alert('idade invalida');
+    nomeVendedor = document.getElementById('nome').value;
+    idadeVendedor = parseInt(document.getElementById('idade').value);
+    vendasVendedor = parseInt(document.getElementById('quant-vendas').value);
+    let cargaSelecionada = document.querySelector('input[name="carga-horaria"]:checked');
+    cargaHorariaVendedor = parseInt(cargaSelecionada.value);
+    if (idadeVendedor <16 || vendasVendedor < 20 || cargaSelecionada == null) {
+        alert('dados invalidos');
         alert(mensagemErro);
         return;
-    }
-    vendasVendedor = prompt('digite os numeros de vendas do vendedor');
-    if(vendasVendedor <20){
-        alert('esse vendedor ainda está na fase de experiência');
-        alert(mensagemErro);
-        return;
-    }
-    cargaHorariaVendedor = prompt('digite o carga horaria do vendedor');
-    if(cargaHorariaVendedor <6 || cargaHorariaVendedor >12 || cargaHorariaVendedor == 10){
-        alert('carga horaria invalida, digite 6, 8 ou 12');
-        alert(mensagemErro);
-        return;
-    }
+    }else{
     alert(mensagemSucesso + nomeVendedor);
     return;
-}
-document.querySelector('.btn-cadastrar').addEventListener('click', cadastrarVendedor);
+}}
+document.querySelector('.btn-submmeter').addEventListener('click', cadastrarVendedor);
+document.querySelector('.btn-voltar').addEventListener('click', voltarPaginaInicial);
