@@ -2,9 +2,7 @@ let mensagemSucesso = 'Cadastro realizado com sucesso \nnome do vendedor: ';
 let mensagemErro = 'Cadastro não realizado';
 LOCAL_STORAGE_KEY = 'vendedores';
 
-function voltarPaginaInicial() {
-    window.location.href = '../index.html';
-}
+
 function cadastrarVendedor() {
     nomeVendedor = document.getElementById('nome').value;
     idadeVendedor = parseInt(document.getElementById('idade').value);

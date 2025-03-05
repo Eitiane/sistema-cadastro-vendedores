@@ -1,4 +1,4 @@
-let mensagemConsulta = 'Erro a consultar dados';
+let mensagemErroConsulta = 'Erro a consultar dados';
 
 function consultarVendedor() {
     if (nomeVendedor == '') {
@@ -9,4 +9,4 @@ function consultarVendedor() {
         alert(`nome: ${nomeVendedor}\nIdade: ${idadeVendedor}\nVendas: ${vendasVendedor}\nCarga Horária: ${cargaHorariaVendedor}`);
     }
 }
-document.querySelector('.btn-consultar').addEventListener('click', consultarVendedor);
+document.querySelector('.btn-voltar').addEventListener('click', voltarPaginaInicial);
