@@ -13,3 +13,5 @@ Menu Interativo: O sistema exibe um menu com as opções de cadastro e consulta 
 Validações de Entrada: Algumas validações foram implementadas para garantir que a idade, o número de vendas e a carga horária dos vendedores atendam a critérios específicos.
 
 Repetição do Menu: Após cada ação, o menu é exibido novamente até que o usuário escolha sair do sistema.
+
+CSS reutilizado de outros projeto. 
