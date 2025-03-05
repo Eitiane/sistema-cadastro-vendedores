@@ -7,6 +7,7 @@ let cargaHorariaVendedor = 0;
 
 function sairSistema() {
     alert('sair do sistema');
+    localStorage.clear();
     return
 }
 function paginaCadastroVendedor() {
